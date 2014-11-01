@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <array name="home">
-        <item>43.7442747</item>
-        <item>-79.2739295</item>
-    </array>
+    <string-array name="home">
+        <item>Home</item>
+        <item>43</item>
+        <item>-79</item>
+    </string-array>
+
+
 </resources>
