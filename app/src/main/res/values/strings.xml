@@ -4,4 +4,13 @@
     <string name="app_name">Find Restaurants</string>
     <string name="action_settings">Settings</string>
 
+    <!--Splash Screen-->
+
+    <string name="btnNext">List Restaurants</string>
+
+    <!--List Restaurants-->
+
+    <string name="hintSearch">Search any restaurants...</string>
+
+
 </resources>
