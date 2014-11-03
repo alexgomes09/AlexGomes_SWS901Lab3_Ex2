@@ -22,21 +22,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
-        android:id="@+id/addressLat"
+        android:id="@+id/address"
         android:layout_below="@+id/addressName"
         android:layout_alignLeft="@+id/addressName"
         android:layout_alignStart="@+id/addressName"
         android:layout_marginLeft="24dp"
         android:textColor="@android:color/black" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/addressLong"
-        android:layout_below="@+id/addressLat"
-        android:layout_alignLeft="@+id/addressLat"
-        android:layout_alignStart="@+id/addressLat"
-        android:textColor="@android:color/black" />
 </RelativeLayout>

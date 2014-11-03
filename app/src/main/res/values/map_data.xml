@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="home">
-        <item>Home</item>
-        <item>43</item>
-        <item>-79</item>
-    </string-array>
+    <array name="locationName">
+        <item>Pizza Pizza</item>
+        <item>Sbarro</item>
+        <item>Pizza Place</item>
+        <item>Scarborough Pizza Depot</item>
+        <item>Fratelli Village Pizzeria</item>
+        <item>Pioneers Pizza</item>
+    </array>
+
+    <array name="locationAddress">
+        <item>41 Lapsley Rd Scarborough, ON M1B 1K1</item>
+        <item>2863 Ellesmere Road Toronto, ON M1E 4B9</item>
+        <item>1221 Markham Rd Scarborough, ON M1H 3E2</item>
+        <item>2060 Ellesmere Rd Scarborough, ON M1H 3B7</item>
+        <item>384 Old Kingston Rd Scarborough, ON M1C 1B6</item>
+        <item>355 Pitfield Rd Scarborough, ON M1S 3E5</item>
+    </array>
+
+    <array name="latitude">
+        <item>43.79593</item>
+        <item>43.78060</item>
+        <item>43.77893</item>
+        <item>43.77594</item>
+        <item>43.78400</item>
+    </array>
+
+    <array name="longitude">
+        <item>-79.22742</item>
+        <item>-79.20501</item>
+        <item>-79.23268</item>
+        <item>-79.23421</item>
+        <item>-79.16989</item>
+    </array>
 
 
 </resources>

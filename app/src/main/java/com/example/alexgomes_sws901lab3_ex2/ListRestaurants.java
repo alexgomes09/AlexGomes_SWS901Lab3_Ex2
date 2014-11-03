@@ -2,8 +2,10 @@ package com.example.alexgomes_sws901lab3_ex2;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,22 +37,28 @@ public class ListRestaurants extends Activity {
     class ListAdapter extends BaseAdapter{
 
         Context context;
-        String[] mapData = null;
-        TextView addressName,addressLat,addressLong;
+        TextView addressName,address;
+
+        TypedArray xmlName,xmlAddress;
 
         public ListAdapter(Context c){
             context = c;
-            mapData = getResources().getStringArray(R.array.home);
+
+            xmlName = getResources().obtainTypedArray(R.array.locationName);
+            xmlAddress = getResources().obtainTypedArray(R.array.locationAddress);
+            //xmlLatitude = getResources().obtainTypedArray(R.array.latitude);
+            //xmlLongitude = getResources().obtainTypedArray(R.array.address);
+
         }
 
         @Override
         public int getCount() {
-            return mapData.length;
+            return xmlName.length();
         }
 
         @Override
         public Object getItem(int i) {
-            return mapData[i];
+            return xmlName.getIndex(i);
         }
 
         @Override
@@ -65,12 +73,13 @@ public class ListRestaurants extends Activity {
             view = inflater.inflate(R.layout.single_map_data,null);
 
             addressName = (TextView)view.findViewById(R.id.addressName);
-            addressLat = (TextView)view.findViewById(R.id.addressLat);
-            addressLong = (TextView)view.findViewById(R.id.addressLong);
+            address = (TextView)view.findViewById(R.id.address);
 
-            addressName.setText(mapData[i]);
-            addressLat.setText(mapData[i]);
-            addressLong.setText(mapData[i]);
+
+            addressName.setText(xmlName.getString(i));
+            address.setText(xmlAddress.getString(i));
+
+            Log.v("test",""+xmlName.getString(i));
 
             return view;
         }
