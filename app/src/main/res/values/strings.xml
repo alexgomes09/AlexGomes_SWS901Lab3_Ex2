@@ -10,7 +10,9 @@
 
     <!--List Restaurants-->
 
-    <string name="hintSearch">Search any restaurants...</string>
+    <string name="btnItalian">Italian</string>
+    <string name="btnChinese">Chinese</string>
+    <string name="btnGreek">Greek</string>
 
 
 </resources>

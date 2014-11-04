@@ -69,6 +69,7 @@ public class MapView extends Activity {
                 .strokeWidth(3.0f)
                 .strokeColor(Color.RED);
 
+        pointLocation.showInfoWindow();
         googleMap.addCircle(circleOptions);
         googleMap.moveCamera(view);
         googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <array name="locationName">
+    <!--========Italian Restarant========-->
+
+    <array name="italianLocationName">
         <item>Pizza Pizza</item>
         <item>Sbarro</item>
         <item>Pizza Place</item>
@@ -10,7 +12,7 @@
         <item>Pioneers Pizza</item>
     </array>
 
-    <array name="locationAddress">
+    <array name="italianLocationAddress">
         <item>41 Lapsley Rd Scarborough, ON M1B 1K1</item>
         <item>2863 Ellesmere Road Toronto, ON M1E 4B9</item>
         <item>1221 Markham Rd Scarborough, ON M1H 3E2</item>
@@ -19,7 +21,7 @@
         <item>355 Pitfield Rd Scarborough, ON M1S 3E5</item>
     </array>
 
-    <array name="latitude">
+    <array name="italianLatitude">
         <item>43.79593</item>
         <item>43.78060</item>
         <item>43.77893</item>
@@ -28,7 +30,7 @@
         <item>43.78725</item>
     </array>
 
-    <array name="longitude">
+    <array name="italianLongitude">
         <item>-79.22742</item>
         <item>-79.20501</item>
         <item>-79.23268</item>
@@ -37,5 +39,82 @@
         <item>-79.25790</item>
     </array>
 
+    <!--========Chinese Restarant========-->
+
+    <array name="chineseLocationName">
+        <item>Supper Buffet</item>
+        <item>Fedrick Restaurant</item>
+        <item>Prak\'s Restaurant and Bar</item>
+        <item>Manchu Wok</item>
+        <item>Royal Chinese Restaurant</item>
+        <item>Sinopino Chinese Restaurant</item>
+        <item>Asian Gourmet</item>
+    </array>
+
+    <array name="chineseLocationAddress">
+        <item>1221 Markham Rd Toronto, ON M1H 3B4</item>
+        <item>1920 Ellesmere Rd Scarborough, ON M1H 2V6</item>
+        <item>752 Markham Rd Scarborough, ON M1H 2A9</item>
+        <item>300 Borough Dr Toronto, ON M1P 4P5</item>
+        <item>3587 Sheppard Ave E Scarborough, ON M1S 1T3</item>
+        <item>4820 Sheppard Ave E Toronto, ON M1S 3V8</item>
+        <item>1265 Military Trail Toronto, ON M1C 1A5</item>
+    </array>
+
+    <array name="chineseLatitude">
+        <item>43.77893</item>
+        <item>43.77463</item>
+        <item>43.76512</item>
+        <item>43.77682</item>
+        <item>43.78325</item>
+        <item>43.79150</item>
+        <item>43.78605</item>
+    </array>
+
+    <array name="chineseLongitude">
+        <item>-79.23268</item>
+        <item>-79.24077</item>
+        <item>-79.22739</item>
+        <item>-79.25685</item>
+        <item>-79.28819</item>
+        <item>-79.25005</item>
+        <item>-79.18729</item>
+    </array>
+
+    <!--========Chinese Restarant========-->
+
+    <array name="greekLocationName">
+        <item>Jimmy The Greek</item>
+        <item>Mr. Greek</item>
+        <item>Taste of Greek Cuisine</item>
+        <item>Hunter\'s Pizza</item>
+        <item>The Arkadia House</item>
+
+
+    </array>
+
+    <array name="greekLocationAddress">
+        <item>300 Borough Dr Toronto, ON M1P 4Y7</item>
+        <item>3855 Milner Ave Scarborough, ON M1B 5N6</item>
+        <item>4410 Kingston Rd Scarborough, ON M1E 2N4</item>
+        <item>2574 Birchmount Rd Toronto, ON M1T 2M5</item>
+        <item>2007 Eglinton Ave E Toronto, ON M1L 2M9</item>
+    </array>
+
+    <array name="greekLatitude">
+        <item>43.77682</item>
+        <item>43.80014</item>
+        <item>43.76778</item>
+        <item>43.78963</item>
+        <item>43.72918</item>
+    </array>
+
+    <array name="greekLongitude">
+        <item>-79.25685</item>
+        <item>-79.19868</item>
+        <item>-79.18961</item>
+        <item>-79.30250</item>
+        <item>-79.28122</item>
+    </array>
 
 </resources>

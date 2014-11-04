@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,27 +41,63 @@ public class ListRestaurants extends Activity {
 
         Context context;
         TextView addressName,address;
+        Button btnItalian,btnChinese,btnGreek;
 
-        TypedArray xmlName,xmlAddress,xmlLatitude,xmlLongitude;
+        TypedArray restaurantName,restaurantAddress,restaurantLatitude,restaurantLongitude;
 
         public ListAdapter(Context c){
             context = c;
 
-            xmlName = getResources().obtainTypedArray(R.array.locationName);
-            xmlAddress = getResources().obtainTypedArray(R.array.locationAddress);
-            xmlLatitude = getResources().obtainTypedArray(R.array.latitude);
-            xmlLongitude = getResources().obtainTypedArray(R.array.longitude);
+            btnItalian = (Button)findViewById(R.id.btnItaliean);
+            btnChinese= (Button)findViewById(R.id.btnChinese);
+            btnGreek = (Button)findViewById(R.id.btnGreek);
 
+            restaurantName = getResources().obtainTypedArray(R.array.italianLocationName);
+            restaurantAddress = getResources().obtainTypedArray(R.array.italianLocationAddress);
+            restaurantLatitude = getResources().obtainTypedArray(R.array.italianLatitude);
+            restaurantLongitude = getResources().obtainTypedArray(R.array.italianLongitude);
+
+            btnItalian.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    restaurantName = getResources().obtainTypedArray(R.array.italianLocationName);
+                    restaurantAddress = getResources().obtainTypedArray(R.array.italianLocationAddress);
+                    restaurantLatitude = getResources().obtainTypedArray(R.array.italianLatitude);
+                    restaurantLongitude = getResources().obtainTypedArray(R.array.italianLongitude);
+                    listAdapter.notifyDataSetChanged();
+                }
+
+            });
+            btnChinese.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    restaurantName = getResources().obtainTypedArray(R.array.chineseLocationName);
+                    restaurantAddress = getResources().obtainTypedArray(R.array.chineseLocationAddress);
+                    restaurantLatitude = getResources().obtainTypedArray(R.array.chineseLatitude);
+                    restaurantLongitude = getResources().obtainTypedArray(R.array.chineseLongitude);
+                    listAdapter.notifyDataSetChanged();
+                }
+            });
+            btnGreek.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    restaurantName = getResources().obtainTypedArray(R.array.greekLocationName);
+                    restaurantAddress = getResources().obtainTypedArray(R.array.greekLocationAddress);
+                    restaurantLatitude = getResources().obtainTypedArray(R.array.greekLatitude);
+                    restaurantLongitude = getResources().obtainTypedArray(R.array.greekLongitude);
+                    listAdapter.notifyDataSetChanged();
+                }
+            });
         }
 
         @Override
         public int getCount() {
-            return xmlName.length();
+            return restaurantName.length();
         }
 
         @Override
         public Object getItem(int i) {
-            return xmlName.getIndex(i);
+            return restaurantName.getIndex(i);
         }
 
         @Override
@@ -77,16 +114,17 @@ public class ListRestaurants extends Activity {
             addressName = (TextView)view.findViewById(R.id.addressName);
             address = (TextView)view.findViewById(R.id.address);
 
-            addressName.setText(xmlName.getString(i));
-            address.setText(xmlAddress.getString(i));
+            addressName.setText(restaurantName.getString(i));
+            address.setText(restaurantAddress.getString(i));
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
                     Intent intent = new Intent(ListRestaurants.this,MapView.class);
-                    intent.putExtra("locationName",xmlName.getText(i));
-                    intent.putExtra("latitude",xmlLatitude.getText(i));
-                    intent.putExtra("longitude",xmlLongitude.getText(i));
+                    intent.putExtra("locationName",restaurantName.getText(i));
+                    intent.putExtra("latitude",restaurantLatitude.getText(i));
+                    intent.putExtra("longitude",restaurantLongitude.getText(i));
                     startActivity(intent);
                 }
             });
